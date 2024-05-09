@@ -1,13 +1,15 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Redirector from './Redirector';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header>Rookedsysc's Deep Link Test</header>
-      <body>
-        <p>This is a test for deep linking in a React app</p>
-      </body>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Redirector />} />
+      </Routes>
+    </Router>
   );
-}
+};
 
 export default App;
